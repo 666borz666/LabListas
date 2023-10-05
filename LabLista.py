@@ -6,6 +6,11 @@ import re
 recuperadosDonantes=["303500620","101110218","412340987","267893456","154328765","534561234","187674329","265437654","243214321","187654321","187659870","687659870","887659870","945659823"]
 #Provincias
 def buscarProvincia(registro):
+    """
+    Funcion: Hacer una busqueda por provincia 
+    Entrada: registo
+    Salida: Provincia
+    """
     for provincia in registro[0]:
         if provincia == "1":
             provincia = "San José"
@@ -29,26 +34,26 @@ def buscarProvincia(registro):
 #1. 
 def agregarDonadores(registro):
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Agregar los donares al BD
+    Entrada: Registro
+    Salida: registros de los donadores ingresado
     """
-    if re.match("\d{9}", registro)==True:
+    if re.match(r'^\d{9}$', registro)==True:
         for pacienteReg in recuperadosDonantes:
             if registro == pacienteReg:
                 print("¡La cedula ya esta registrada!")
             else:
                 recuperadosDonantes.append(registro)
-                print(f"Cedula{registro} registrada correctamente. ")
+                print(f"Cedula {registro} registrada correctamente. ")
     else:
         print("La cédula no cumple con el formato correcto. Inténtelo de nuevo.")
         return
 #2. 
 def decodificarDonador(registro):
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Decoficar los donadores 
+    Entrada: Registro
+    Salida: Registro de decoficado
     """
     if re.match("\d{9}", registro):
         if registro in recuperadosDonantes:
@@ -60,9 +65,9 @@ def decodificarDonador(registro):
 #3
 def listarDonadores(opcion):
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Generar una lista de donadores
+    Entrada: Opcion()
+    Salida: Lista segun los donadores
     """
     i = 0
     opcion=str(opcion)
@@ -78,9 +83,9 @@ def listarDonadores(opcion):
 #4
 def donadoresTotales():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Generar los donadores totales en la BD
+    Entrada: total
+    Salida: Todos los donadores del clorito picado
     """
     recuperadosDonantes.sort() 
     a = b = c = d = e = f = g = h = i = 0
@@ -125,9 +130,9 @@ def donadoresTotales():
 #5
 def donadoresNoTipicos():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Donadores no a tipico de la BD
+    Entrada: pacientes
+    Salida: muestra la posible lsita de donadores tipicos
     """
     i = 0
     j = 0

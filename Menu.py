@@ -7,9 +7,9 @@ from LabLista import *
 #Definición de funciones
 def opcionagregarDonadores():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Agregar los posibles donadores. 
+    Entrada: Cedula con 9 digitos.
+    Salida: No tiene salida directa, pero realiza el registro del donador y retorna al menú principal.
     """
     registro=input("Ingrese una cédula (9 digitos numericos): ")
     agregarDonadores(registro)
@@ -17,9 +17,9 @@ def opcionagregarDonadores():
 
 def opciondecodificarDonador():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Codificar los donadores.
+    Entrada: Cedula con 9 digitos
+    Salida: No tiene salida directa, pero realiza el registro del donador y retorna al menú principal.
     """
     registro=input("Ingrese una cédula (9 digitos numericos): ")
     decodificarDonador(registro)
@@ -27,37 +27,40 @@ def opciondecodificarDonador():
 
 def opcionlistarDonadores():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Lista de donares por provincias
+    Entrada: Numero de provincia a bucar
+    Salida: No tiene salida directa, pero realiza el registro del donador y retorna al menú principal.
     """
-    print("1. San José")
-    print("2. Alajuela")
-    print("3. Cartago")
-    print("4. Heredia")
-    print("5. Guanacaste")
-    print("6. Puntarenas")
-    print("7. Limón")
-    print("8. Nacionalizados o naturalizados")
-    print("9. Partida especial de nacimientos")
-    opcion=input("Ingrese la provincia que desea listar: ")
-    listarDonadores(opcion)
+    try:
+        print("1. San José")
+        print("2. Alajuela")
+        print("3. Cartago")
+        print("4. Heredia")
+        print("5. Guanacaste")
+        print("6. Puntarenas")
+        print("7. Limón")
+        print("8. Nacionalizados o naturalizados")
+        print("9. Partida especial de nacimientos")
+        opcion=input("Ingrese la provincia que desea listar: ")
+        listarDonadores(opcion)
+    except ValueError:
+        print("La opción ingresada no es válida. Inténtelo de nuevo.")
     return menu()
 
 def opciondonadoresTotales():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Donadores totales en la BD.
+    Entrada: Donadores
+    Salida: No tiene salida directa, pero realiza el registro del donador y retorna al menú principal.
     """
     donadoresTotales()
     return menu()
 
 def opciondonadoresNoTipicos():
     """
-    Función:
-    Entrada:
-    Salida:
+    Función: Donadores no a tipicos 
+    Entrada: Donadores
+    Salida: No tiene salida directa, pero realiza el registro del donador y retorna al menú principal.
     """
     donadoresNoTipicos()
     return menu()
