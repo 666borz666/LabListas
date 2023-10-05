@@ -1,6 +1,6 @@
 #Creado por: Ignacio García y Daniel Campos
 #Creación: 02/10/2023
-#Ultima modificación: 
+#Ultima modificación: 05/10/2023
 #Versión: 3.10.6
 import re
 recuperadosDonantes=["303500620","101110218","412340987","267893456","154328765","534561234","187674329","265437654","243214321","187654321","187659870","687659870","887659870","945659823"]

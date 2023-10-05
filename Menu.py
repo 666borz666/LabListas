@@ -1,6 +1,6 @@
 #Creado por: Ignacio García y Daniel Campos
 #Creación: 02/10/2023
-#Ultima modificación: 
+#Ultima modificación: 05/10/2023
 #Versión: 3.10.6
 #Importación de librerias
 from LabLista import *
