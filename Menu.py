@@ -31,6 +31,17 @@ def opcionlistarDonadores():
     Entrada:
     Salida:
     """
+    print("1. San José")
+    print("2. Alajuela")
+    print("3. Cartago")
+    print("4. Heredia")
+    print("5. Guanacaste")
+    print("6. Puntarenas")
+    print("7. Limón")
+    print("8. Nacionalizados o naturalizados")
+    print("9. Partida especial de nacimientos")
+    opcion=input("Ingrese la provincia que desea listar: ")
+    listarDonadores(opcion)
     return menu()
 
 def opciondonadoresTotales():
@@ -39,6 +50,7 @@ def opciondonadoresTotales():
     Entrada:
     Salida:
     """
+    donadoresTotales()
     return menu()
 
 def opciondonadoresNoTipicos():
@@ -47,6 +59,7 @@ def opciondonadoresNoTipicos():
     Entrada:
     Salida:
     """
+    donadoresNoTipicos()
     return menu()
 
 #Menú
@@ -74,7 +87,7 @@ def menu():
             print(opciondonadoresNoTipicos())
         elif opcion == 6:
             print("Gracias por utilizar el sistema.")
-            return
+            return ""
     except ValueError:
         print("La opción ingresada no es válida. Inténtelo de nuevo.")
         menu()
