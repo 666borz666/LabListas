@@ -38,13 +38,14 @@ def agregarDonadores(registro):
     Entrada: Registro
     Salida: registros de los donadores ingresado
     """
-    if re.match(r'^\d{9}$', registro)==True:
+    if re.match("\d{9}", registro):
         for pacienteReg in recuperadosDonantes:
             if registro == pacienteReg:
                 print("¡La cedula ya esta registrada!")
             else:
                 recuperadosDonantes.append(registro)
                 print(f"Cedula {registro} registrada correctamente. ")
+            return
     else:
         print("La cédula no cumple con el formato correcto. Inténtelo de nuevo.")
         return
